@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Map from './Map'
+import SelectBox from './SelectBox'
 
 const MapSet = () => {
     const [state, setState] = useState({
@@ -40,7 +41,10 @@ const MapSet = () => {
             <button onClick={sungkyul}>성결대</button>
             <button onClick={myLocate}>내위치</button> <br/><br/>
             <button onClick={showLarge}>확대</button>
-            <button onClick={showSmall}>취소</button>
+            <button onClick={showSmall}>취소</button><br/><br/>
+
+            <SelectBox></SelectBox>
+
 
         </div>
     )
