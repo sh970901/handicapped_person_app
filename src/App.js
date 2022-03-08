@@ -1,10 +1,12 @@
+/*global kakao*/
 import './App.css';
-import Map from './components/Map';
+import MapSet from './components/MapSet';
+
 
 function App() {
   return (
     <div className="App">
-      <Map></Map>
+      <MapSet></MapSet>
     </div>
   );
 }
