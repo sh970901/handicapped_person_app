@@ -10,25 +10,32 @@ const Map = (props) => {
       level: props.level
     };
     const map = new kakao.maps.Map(container, options);
+
+    let markerPosition = new kakao.maps.LatLng(
+      props.center.lat,
+      props.center.lng
+    );
+
+    let marker = new kakao.maps.Marker({
+      position: markerPosition,
+    });
+    marker.setMap(map);
+
+    var content='<div>hello</div>'
+    const infowindow = new kakao.maps.InfoWindow({ removable: true, width: 300, position: new kakao.maps.LatLng(props.center.lat, props.center.lng), content: content})
+    
+    
+    kakao.maps.event.addListener(marker, 'click', function(){
+      infowindow.open(map, marker)  
+      
+    })
+
+
+
   }, [props])
 
 
 
-  // useEffect(() => {
-  //   console.log()
-  //   const container = document.getElementById('map');
-  //   const options = {
-  //     center: new kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
-  //     level: 3
-  //   };
-  //   const map = new kakao.maps.Map(container, options);
-  //   const markerPosition = new kakao.maps.LatLng(37.365264512305174, 127.10676860117488);
-  //   const marker = new kakao.maps.Marker({
-  //     position: markerPosition
-  //   });
-  //   marker.setMap(map)
-
-  //   }, [])
 
   return (
     <div>
