@@ -21,7 +21,8 @@ const connection = mysql.createConnection({
     database: conf.database
   });
   connection.connect();
-app.get('/api', (req,res)=>{
+app.get('/api/:facilities', (req,res)=>{
+    console.log(req.params.facilities)
     connection.query('SELECT * FROM textTable', function(err,rows,fields){
         res.header("Access-Control-Allow-Origin", "*");
         res.send(rows)

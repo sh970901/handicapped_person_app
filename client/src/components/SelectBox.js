@@ -5,15 +5,19 @@ const SelectBox = () => {
     const [facilities, setFacilities] = useState("")
     const [show,setShow] = useState("시설을 골라주세요.")
     const [onInfo, setOnInfo] = useState(false)
+    const [isShow, setIsShow] = useState(false)
 
     function handleOption(e){
+        
         console.log(e.target.value)
         setFacilities(e.target.value)
         setShow('버튼을 눌러주세요')
+        setIsShow(true) 
+        setOnInfo(false)
         
     }
     function showFacilities(){
-        setOnInfo(true)
+        setOnInfo(true)  
     }
     return (
         <>
@@ -22,8 +26,10 @@ const SelectBox = () => {
             <option key="apple" value="보육원">보육원</option>
             <option key="orange" value="학교">학교</option>
         </select><br/>
-        <button onClick={showFacilities}>{facilities}</button>{' '}{show}
-        {onInfo ? <Data></Data> : null}
+        {show}<br/>
+        {isShow ? <button onClick={showFacilities}>{facilities}</button> : null}<br/>
+        
+        {onInfo ? <Data facilities={facilities} showFacilities={showFacilities} ></Data> : null}
         </>
         
     )
