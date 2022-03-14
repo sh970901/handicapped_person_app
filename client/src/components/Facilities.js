@@ -23,7 +23,6 @@ const Facilities = (props) => {
   }
   function showLibrary(){
     props.setIsShowChairData(false)
-    props.setLocate([])
     setIsChair(false)
     setIsLibrary(true)
     fetch('http://127.0.0.1:5000/api/Library')
@@ -33,7 +32,7 @@ const Facilities = (props) => {
     })
   }
   function showElectChair(){
-    props.setLocate([])
+    // window.location.reload()
     props.setIsShowLibraryData(false)
     setIsChair(true)
     setIsLibrary(false)
@@ -41,9 +40,7 @@ const Facilities = (props) => {
     .then(res=>res.json())
     .then(data=>{
       props.setLocate(data)
-    })
-
-    
+    })  
   }
 
   return (
@@ -54,7 +51,7 @@ const Facilities = (props) => {
       <button onClick={showLibrary}>도서관</button>{'  '}
       <button onClick={showElectChair}>전동휠체어</button><br/>
       {isLibrary ? <Library setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowLibraryData={props.setIsShowLibraryData} ></Library>:null}
-      {isChair ? <ElectricChair setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair>:null}
+      {isChair ? <ElectricChair setChairData={props.setChairData} setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair>:null}
 
     </>
 

@@ -7,7 +7,6 @@ const ElectricChair = (props) => {
     const [data, setData] = useState()
     
     useEffect(() => {
-        console.log(props.locate)
         if(props.locate===undefined){
             console.log('대기')
         }else{
@@ -17,13 +16,12 @@ const ElectricChair = (props) => {
     }, [props])
 
     const  electricChairData = ()=>{
-        console.log(data.length)
         const result = [];
         if(data.length===undefined){
             console.log('대기')
         }else{
             for(let i=0; i<data.length; i++){
-                result.push(<><button key={i} onClick={showData}>{data[i].시설명}</button><br/></>)
+                result.push(<><button key={i} onClick={()=>{props.setChairData(data[i]); showData()}}>{data[i].시설명}</button><br/></>)
             }   
         }
         return result 

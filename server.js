@@ -28,7 +28,15 @@ app.get('/api/Library', (req,res)=>{
     })
 })
 app.get('/api/electricChair', (req,res)=>{
-    connection.query('SELECT * FROM Electric_WC_CS', function(err,rows,fields){
+    console.log(req.params)
+    connection.query('SELECT * FROM Electric_WC_CS',function(err,rows,fields){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.send(rows)
+    })
+})
+app.get('/api/electricChair/:data', (req,res)=>{
+    console.log(req.params.data)
+    connection.query('SELECT * FROM Electric_WC_CS WHERE 시설명=?',req.params.data, function(err,rows,fields){
         res.header("Access-Control-Allow-Origin", "*");
         res.send(rows)
     })
