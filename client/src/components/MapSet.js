@@ -1,3 +1,4 @@
+/*global kakao*/
 import React, { useState } from 'react'
 import Map from './Map'
 
@@ -29,6 +30,18 @@ const MapSet = () => {
     function showSmall(){
         setLevel(level+1)
     }
+    // var geocoder = new kakao.maps.services.Geocoder()
+    // function geocode(){
+    //     geocoder.addressSearch('제주특별자치도 제주시 첨단로 242', function(results,status){
+    //         if(status === kakao.maps.services.Status.OK){
+    //             console.log(results[0])
+    //             var coords = new kakao.mpas.LatLng(results[0].y, results[0].x);
+    //             console.log(coords)
+    //         }
+    //     })
+    // }
+
+    
 
     return (
         <div>
@@ -42,6 +55,7 @@ const MapSet = () => {
             <button onClick={myLocate}>내위치</button> <br/><br/>
             <button onClick={showLarge}>확대</button>
             <button onClick={showSmall}>취소</button><br/><br/>
+            {/* <button onClick={geocode}>위도경도확인</button> */}
 
             
 

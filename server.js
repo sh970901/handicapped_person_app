@@ -28,4 +28,10 @@ app.get('/api/:facilities', (req,res)=>{
         res.send(rows)
     })
 })
+app.get('/api', (req,res)=>{
+    connection.query('SELECT * FROM textTable', function(err,rows,fields){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.send(rows)
+    })
+})
 app.listen(port, ()=> console.log("서버 작동"))

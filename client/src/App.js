@@ -1,7 +1,8 @@
 /*global kakao*/
 import './App.css';
+import Facilities from './components/Facilities';
 import MapSet from './components/MapSet';
-import SelectBox from './components/SelectBox';
+
 
 
 
@@ -22,7 +23,7 @@ function App() {
       </thead>
       <tbody>
         <tr>
-          <td><SelectBox></SelectBox></td>
+          <td><Facilities></Facilities></td>
 
 
           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
