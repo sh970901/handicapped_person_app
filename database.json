@@ -1,7 +1,7 @@
 {
-    "host" : "220.67.115.29",
-    "user" : "letsbeceo",
-    "password" :"letsbeceo",
-    "database" :"letsbeceo",
-    "port": "3388"
+    "host" : "",
+    "user" : "",
+    "password" :"",
+    "database" :"",
+    "port": ""
   }
