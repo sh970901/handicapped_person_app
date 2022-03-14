@@ -1,12 +1,16 @@
 /*global kakao*/
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 import Map from './Map'
 
 
-const MapSet = () => {
+const MapSet = (props) => {
+    useEffect(()=>{
+       setState({center: {lat: props.lat, lng: props.lng}, isPanto: true})
+    },[props])
     const [state, setState] = useState({
-        center: { lat: 37.365264512305174, lng: 127.10676860117488 },
-        isPanto: false,
+        center: {lat:props.lat, lng:props.lng},
+        isPanto: true,
     })
     const [level, setLevel] = useState(3)
 

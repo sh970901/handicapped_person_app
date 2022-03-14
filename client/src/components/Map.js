@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 const Map = (props) => {
 
   useEffect(() => {
+    // console.log(props.center)
     const container = document.getElementById('map');
     const options = {
       center: new kakao.maps.LatLng(props.center.lat, props.center.lng),

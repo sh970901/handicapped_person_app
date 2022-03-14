@@ -21,17 +21,16 @@ const connection = mysql.createConnection({
     database: conf.database
   });
   connection.connect();
-app.get('/api/:facilities', (req,res)=>{
-    console.log(req.params.facilities)
-    connection.query('SELECT * FROM textTable', function(err,rows,fields){
+app.get('/api/Library', (req,res)=>{
+    connection.query('SELECT * FROM Library', function(err,rows,fields){
         res.header("Access-Control-Allow-Origin", "*");
         res.send(rows)
     })
 })
-app.get('/api', (req,res)=>{
-    connection.query('SELECT * FROM textTable', function(err,rows,fields){
-        res.header("Access-Control-Allow-Origin", "*");
-        res.send(rows)
-    })
-})
+// app.get('/api', (req,res)=>{
+//     connection.query('SELECT * FROM Library', function(err,rows,fields){
+//         res.header("Access-Control-Allow-Origin", "*");
+//         res.send(rows)
+//     })
+// })
 app.listen(port, ()=> console.log("서버 작동"))
