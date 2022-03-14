@@ -27,6 +27,12 @@ app.get('/api/Library', (req,res)=>{
         res.send(rows)
     })
 })
+app.get('/api/electricChair', (req,res)=>{
+    connection.query('SELECT * FROM Electric_WC_CS', function(err,rows,fields){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.send(rows)
+    })
+})
 // app.get('/api', (req,res)=>{
 //     connection.query('SELECT * FROM Library', function(err,rows,fields){
 //         res.header("Access-Control-Allow-Origin", "*");

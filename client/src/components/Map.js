@@ -1,5 +1,6 @@
 /*global kakao*/
 import React, { useEffect, useState } from 'react'
+//카카오맵 속성 
 
 const Map = (props) => {
 

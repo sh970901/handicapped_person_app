@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import Map from './Map'
-
+//맵 띄우기
 
 const MapSet = (props) => {
     useEffect(()=>{

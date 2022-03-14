@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
-import Data from './components/Data';
+import Data from './components/Data/Data';
 import Facilities from './components/Facilities';
 import MapSet from './components/MapSet';
 
@@ -10,14 +10,15 @@ function App() {
   const [lat, setLat] = useState(37.365264512305174);
   const [lng, setLng] = useState(127.10676860117488);
   const [locate, setLocate] = useState([]);
-  const [isShowData, setIsShowData] = useState(false)
+  const [isShowLibraryData, setIsShowLibraryData] = useState(false)
+  const [isShowChairData, setIsShowChairData] = useState(false)
 
 
 
 
   useEffect(()=>{
     
-  },[lat])
+  },[lat,lng])
 
 
 
@@ -40,7 +41,7 @@ function App() {
       </thead>
       <tbody>
         <tr>
-          <td><Facilities setIsShowData={setIsShowData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
+          <td><Facilities setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
 
 
           <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -58,7 +59,8 @@ function App() {
           <td></td>
           <td></td>
           
-          <td><Data isShowData={isShowData} locate={locate}></Data></td>
+          <td><Data isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
+          
         </tr>
         
       </tbody>
