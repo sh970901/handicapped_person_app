@@ -80,7 +80,11 @@ const Facilities = (props) => {
     props.setIsShowLiveData(false)
 
     props.setIsTour(true)
-    
+    fetch('http://127.0.0.1:5000/api/Tourism')
+    .then(res=>res.json())
+    .then(data=>{
+      props.setLocate(data)
+    })
   }
 
 
@@ -98,7 +102,7 @@ const Facilities = (props) => {
       {props.isLibrary ? <Library setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowLibraryData={props.setIsShowLibraryData} ></Library>:null}
       {props.isChair ? <ElectricChair setChairData={props.setChairData} setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair>:null}
       {props.isLive ? <Live setIsShowLiveData={props.setIsShowLiveData} isShowLiveData={props.isShowLiveData} locate={props.locate} setLiveData={props.setLiveData} setLat={props.setLat} setLng={props.setLng}></Live>:null}
-      {props.isTour ? <Tourism></Tourism>:null}
+      {props.isTour ? <Tourism setIsShowTourData={props.setIsShowTourData} isShowTourData={props.isShowTourData} locate={props.locate} setTourData={props.setTourData} setLat={props.setLat} setLng={props.setLng} ></Tourism>:null}
     </>
 
   )

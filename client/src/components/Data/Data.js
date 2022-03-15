@@ -6,7 +6,7 @@ const Data = (props) => {
   const [state, setState] = useState('')
 
   useEffect(() => {
-  
+  console.log(props.tourData)
   }, [props])
 
   return (
@@ -34,6 +34,11 @@ const Data = (props) => {
         시설명: {props.liveData.시설명}<br />
         주소: {props.liveData.시설종류명}<br />
         시설주소: {props.liveData.시설주소}<br />
+      </div>:null}
+      {props.isShowTourData ? 
+      <div>
+        시설명: {props.tourData.idtourism_name}<br/>
+        시설주소: {props.tourData.idtourism_addr}
       </div>:null}
 
 

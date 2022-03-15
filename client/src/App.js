@@ -56,7 +56,7 @@ function App() {
         <tr>
          
           
-          <td><Data liveData={liveData} isShowLiveData={isShowLiveData} chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
+          <td><Data tourData={tourData} isShowTourData={isShowTourData} liveData={liveData} isShowLiveData={isShowLiveData} chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
           
         </tr>
         
