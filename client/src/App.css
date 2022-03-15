@@ -1,11 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Poor+Story&display=swap');
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -24,22 +17,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-html, body{
-  width: 100%;
-  height: 100%;
-}
+
+
+
+
 .map{
   margin-top: 50px;
   width: 500px;
@@ -47,3 +29,62 @@ html, body{
   display:inline-block;
   
 }
+.facilitiesShow{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 10px; 
+  background: rgb(236, 199, 97); 
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  overflow: scroll;
+  border-radius: 6px;
+  border: 1px solid rgb(183, 81, 187);
+}
+.data{
+  display: inline-block;
+  border: 3px solid black;
+}
+/* .mapSet{
+  position: relative;
+  margin: 1000px;
+}*/
+.facilities{
+margin-left: 15%;
+ display: inline-block;
+ width: 500px;
+ height: 500px;
+} 
+.facilitiesBtn{
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Poor Story', cursive;
+  font-size: 15px;
+  border: 4px solid #88a5d1;;
+}
+
+.btn{
+  color: #1c2b4a;
+  border: 4px solid #88a5d1;;
+  /* background-color: #a9a56f; */
+  font-size: 20px;
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Poor Story', cursive;
+  /* display: inline-block;
+  position: static; */
+}
+
+
+
+
+
+
+
+
+
+
+
+.name{
+  margin-left: 50%;
+}
+

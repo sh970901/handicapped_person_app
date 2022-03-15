@@ -26,8 +26,8 @@ const Library = (props) => {
 
     return (
         <>
-          {isDelay ? <div><br/>시설명: {' '}
-             <button onClick={showData}>{props.locate[0].도서관명}</button><br/>
+          {isDelay ? <div><br/>{' '}
+             <button className='btn' onClick={showData}>{props.locate[0].도서관명}</button><br/>
           </div> : null}
             
         </>

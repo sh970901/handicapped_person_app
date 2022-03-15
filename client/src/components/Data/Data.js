@@ -6,7 +6,7 @@ const Data = (props) => {
   const [state, setState] = useState('')
 
   useEffect(() => {
-  console.log(props.tourData)
+  
   }, [props])
 
   return (

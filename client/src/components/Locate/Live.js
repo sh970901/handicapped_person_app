@@ -34,7 +34,7 @@ const Live = (props) => {
             console.log('대기')
         }else{
             for(let i=0; i<data.length; i++){
-                result.push(<><button key={i} onClick={()=>{
+                result.push(<><button className='btn' key={i} onClick={()=>{
                     props.setLiveData(data[i]);  
                     showData();
                     geocode(data[i].시설주소)
