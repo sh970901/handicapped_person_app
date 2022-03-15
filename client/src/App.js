@@ -10,6 +10,9 @@ function App() {
   const [lat, setLat] = useState(37.365264512305174);
   const [lng, setLng] = useState(127.10676860117488);
   const [locate, setLocate] = useState([]);
+  const [isLibrary, setIsLibrary] = useState(false)
+  const [isChair, setIsChair] = useState(false)
+
   const [isShowLibraryData, setIsShowLibraryData] = useState(false);
   const [isShowChairData, setIsShowChairData] = useState(false);
   //의자 데이터 전달용 변수 electricChair => data
@@ -34,7 +37,7 @@ function App() {
       </thead>
       <tbody>
         <tr>
-          <td><Facilities setChairData={setChairData} setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
+          <td><Facilities isChair={isChair} setIsChair={setIsChair} isLibrary={isLibrary} setIsLibrary={setIsLibrary}setChairData={setChairData} setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
 
 
                  

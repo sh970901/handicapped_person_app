@@ -21,7 +21,7 @@ const ElectricChair = (props) => {
             console.log('대기')
         }else{
             for(let i=0; i<data.length; i++){
-                result.push(<><button key={i} onClick={()=>{props.setChairData(data[i]); showData()}}>{data[i].시설명}</button><br/></>)
+                result.push(<><button key={i} onClick={()=>{props.setChairData(data[i]); props.setLat(data[i].위도); props.setLng(data[i].경도); showData()}}>{data[i].시설명}</button><br/></>)
             }   
         }
         return result 

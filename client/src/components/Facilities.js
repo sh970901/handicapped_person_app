@@ -7,8 +7,8 @@ import Library from './Locate/Library';
 
 const Facilities = (props) => {
   const [data1, setData1] = useState([]);
-  const [isLibrary, setIsLibrary] = useState(false)
-  const [isChair, setIsChair] = useState(false)
+  // const [isLibrary, setIsLibrary] = useState(false)
+  // const [isChair, setIsChair] = useState(false)
   
   function showHospital(){
     console.log("병원")
@@ -23,8 +23,8 @@ const Facilities = (props) => {
   }
   function showLibrary(){
     props.setIsShowChairData(false)
-    setIsChair(false)
-    setIsLibrary(true)
+    props.setIsChair(false)
+    props.setIsLibrary(true)
     fetch('http://127.0.0.1:5000/api/Library')
     .then(res=>res.json())
     .then(data=>{
@@ -34,8 +34,8 @@ const Facilities = (props) => {
   function showElectChair(){
     // window.location.reload()
     props.setIsShowLibraryData(false)
-    setIsChair(true)
-    setIsLibrary(false)
+    props.setIsChair(true)
+    props.setIsLibrary(false)
     fetch('http://127.0.0.1:5000/api/electricChair')
     .then(res=>res.json())
     .then(data=>{
@@ -50,8 +50,8 @@ const Facilities = (props) => {
       <button onClick={showConvenience}>편의 시설</button>{'  '}
       <button onClick={showLibrary}>도서관</button>{'  '}
       <button onClick={showElectChair}>전동휠체어</button><br/>
-      {isLibrary ? <Library setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowLibraryData={props.setIsShowLibraryData} ></Library>:null}
-      {isChair ? <ElectricChair setChairData={props.setChairData} setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair>:null}
+      {props.isLibrary ? <Library setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowLibraryData={props.setIsShowLibraryData} ></Library>:null}
+      {props.isChair ? <ElectricChair setChairData={props.setChairData} setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair>:null}
 
     </>
 
