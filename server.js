@@ -28,7 +28,6 @@ app.get('/api/Library', (req,res)=>{
     })
 })
 app.get('/api/electricChair', (req,res)=>{
-    console.log(req.params)
     connection.query('SELECT * FROM Electric_WC_CS',function(err,rows,fields){
         res.header("Access-Control-Allow-Origin", "*");
         res.send(rows)
@@ -43,6 +42,12 @@ app.get('/api/electricChair/:data', (req,res)=>{
 })
 app.get('/api/SWF', (req,res)=>{
     connection.query('SELECT * FROM SWF',function(err,rows,fields){
+        res.header("Access-Control-Allow-Origin", "*");
+        res.send(rows)
+    })
+})
+app.get('/api/Tourism', (req,res)=>{
+    connection.query('SELECT * FROM Tourism',function(err,rows,fields){
         res.header("Access-Control-Allow-Origin", "*");
         res.send(rows)
     })
