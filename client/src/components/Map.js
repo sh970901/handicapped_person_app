@@ -23,7 +23,7 @@ const Map = (props) => {
     });
     marker.setMap(map);
 
-    var content='<div>hello</div>'
+    var content='정보 보기 <button onClick={aa}>보기</button>'
     const infowindow = new kakao.maps.InfoWindow({ removable: true, width: 300, position: new kakao.maps.LatLng(props.center.lat, props.center.lng), content: content})
     
     

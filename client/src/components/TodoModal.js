@@ -13,7 +13,12 @@ const TodoModal = (props) => {
             >
                 <div className='modalItem'>
                 <h3>사용법</h3>
-
+                <h1>ㅋㅇㅋㅇㅋㅇㅋ</h1>
+                <p>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                
                 <button onClick={props.closeModal}>닫기</button>
                 </div>
             </Modal>

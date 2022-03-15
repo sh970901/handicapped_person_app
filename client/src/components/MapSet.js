@@ -12,13 +12,7 @@ const MapSet = (props) => {
         isPanto: true,
     })
     const [level, setLevel] = useState(3)
-
-    function sungkyul() {
-        setState({ center: { lat: 37.3798295, lng: 126.9247985 }, isPanTo: true, })
-    }
-    function locate() {
-        setState({ center: { lat: 33.452513, lng: 126.570888 }, isPanTo: true, })
-    }
+    
     function myLocate() {
         {
             navigator.geolocation.getCurrentPosition((position)=>{
@@ -38,17 +32,15 @@ const MapSet = (props) => {
     
 
     return (
-        <div>
+        <div className='mapSet'>
             <Map
                 center={state.center}
                 isPanto={state.isPanto}
                 level={level}
             ></Map>
-            <button onClick={locate}>위치변경</button>
-            <button onClick={sungkyul}>성결대</button>
-            <button onClick={myLocate}>내위치</button> <br/><br/>
-            <button onClick={showLarge}>확대</button>
-            <button onClick={showSmall}>취소</button><br/><br/>
+            <button className='btn' onClick={myLocate}>내 위치</button> <br/><br/>
+            <button className='btn' onClick={showLarge}>확대</button>
+            <button className='btn' onClick={showSmall}>취소</button><br/><br/>
             {/* <button onClick={geocode}>위도경도확인</button> */}
 
             

@@ -103,7 +103,7 @@ const Facilities = (props) => {
 
   return (
     <>
-      <div>
+      <div className='facilitiesBtns'>
         <button className='facilitiesBtn' onClick={showLibrary}>도서관</button>{'  '}
         <button className='facilitiesBtn' onClick={showElectChair}>전동휠체어</button>{'  '}
         <button className='facilitiesBtn' onClick={showLive}>장애인 거주 시설</button>{'  '}

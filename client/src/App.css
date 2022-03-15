@@ -43,22 +43,27 @@
   overflow: scroll;
   border-radius: 6px;
   border: 1px solid rgb(183, 81, 187);
+  margin-left: 300px;
 }
 .data{
   display: inline-block;
   border: 3px solid black;
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Poor Story', cursive;
 }
-/* .mapSet{
+.mapSet{
   position: relative;
-  margin: 1000px;
-}*/
+  margin-left: 200px;
+}
 .facilities{
-margin-left: 15%;
+  
+margin-left: 50px;
  display: inline-block;
- width: 500px;
+ width: 700px;
  height: 500px;
 } 
 .facilitiesBtn{
+  
   font-family: 'Nanum Pen Script', cursive;
   font-family: 'Poor Story', cursive;
   font-size: 15px;
@@ -76,6 +81,16 @@ margin-left: 15%;
   position: static; */
 }
 
+.app{
+  text-align: center;
+  background-color: #88a5d1;
+  color: rgb(255, 255, 130);;
+  
+}
+.facilitiesBtns{
+  margin-left: 300px;
+}
+
 
 
 
@@ -88,6 +103,8 @@ margin-left: 15%;
 
 .name{
   margin-left: 50%;
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Poor Story', cursive;
 }
 .modalItem
    {
@@ -98,8 +115,8 @@ margin-left: 15%;
    {
     background-color: #a99e6f;
     font-family: 'Nanum Pen Script', cursive;
-    width: 700px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
 
    }
    .ReactModal__Content button
