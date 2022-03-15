@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import Map from './Map'
 //맵 띄우기
-
 const MapSet = (props) => {
     useEffect(()=>{
        setState({center: {lat: props.lat, lng: props.lng}, isPanto: true})
@@ -34,16 +33,7 @@ const MapSet = (props) => {
     function showSmall(){
         setLevel(level+1)
     }
-    // var geocoder = new kakao.maps.services.Geocoder()
-    // function geocode(){
-    //     geocoder.addressSearch('제주특별자치도 제주시 첨단로 242', function(results,status){
-    //         if(status === kakao.maps.services.Status.OK){
-    //             console.log(results[0])
-    //             var coords = new kakao.mpas.LatLng(results[0].y, results[0].x);
-    //             console.log(coords)
-    //         }
-    //     })
-    // }
+    
 
     
 

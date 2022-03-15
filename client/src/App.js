@@ -10,13 +10,18 @@ function App() {
   const [lat, setLat] = useState(37.365264512305174);
   const [lng, setLng] = useState(127.10676860117488);
   const [locate, setLocate] = useState([]);
+
   const [isLibrary, setIsLibrary] = useState(false)
   const [isChair, setIsChair] = useState(false)
+  const [isLive, setIsLive] = useState(false)
 
   const [isShowLibraryData, setIsShowLibraryData] = useState(false);
   const [isShowChairData, setIsShowChairData] = useState(false);
+  const [isShowLiveData, setIsShowLiveData] = useState(false)
   //의자 데이터 전달용 변수 electricChair => data
+  
   const [chairData, setChairData] = useState();
+  const [liveData, setLiveData] = useState();
 
 
   useEffect(()=>{
@@ -37,7 +42,7 @@ function App() {
       </thead>
       <tbody>
         <tr>
-          <td><Facilities isChair={isChair} setIsChair={setIsChair} isLibrary={isLibrary} setIsLibrary={setIsLibrary}setChairData={setChairData} setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
+          <td><Facilities setLiveData={setLiveData} isShowLiveData={isShowLiveData} setIsShowLiveData={setIsShowLiveData} isLive={isLive} setIsLive={setIsLive} isChair={isChair} setIsChair={setIsChair} isLibrary={isLibrary} setIsLibrary={setIsLibrary}setChairData={setChairData} setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities></td>
 
 
                  
@@ -46,7 +51,7 @@ function App() {
         <tr>
          
           
-          <td><Data chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
+          <td><Data liveData={liveData} isShowLiveData={isShowLiveData} chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
           
         </tr>
         
