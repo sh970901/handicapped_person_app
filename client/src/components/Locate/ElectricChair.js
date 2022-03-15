@@ -24,8 +24,7 @@ const ElectricChair = (props) => {
                 result.push(<><button key={i} onClick={()=>{props.setChairData(data[i]); props.setLat(data[i].위도); props.setLng(data[i].경도); showData()}}>{data[i].시설명}</button><br/></>)
             }   
         }
-        return result 
-        
+        return result         
     }
     function showData(){
         props.setIsShowChairData(true)
