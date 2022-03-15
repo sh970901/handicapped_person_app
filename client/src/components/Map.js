@@ -1,5 +1,10 @@
 /*global kakao*/
 import React, { useEffect, useState } from 'react'
+
+import Geocode from "react-geocode";
+
+
+
 //카카오맵 속성 
 
 const Map = (props) => {
@@ -23,13 +28,14 @@ const Map = (props) => {
     });
     marker.setMap(map);
 
-    var content='정보 보기 <button onClick={aa}>보기</button>'
-    const infowindow = new kakao.maps.InfoWindow({ removable: true, width: 300, position: new kakao.maps.LatLng(props.center.lat, props.center.lng), content: content})
+    // var content='정보 보기 <button onClick={()=>window.open(\'www.naver.com\')}>보기</button>'
+    // const infowindow = new kakao.maps.InfoWindow({ removable: true, width: 300, position: new kakao.maps.LatLng(props.center.lat, props.center.lng), content: content})
     
     
     kakao.maps.event.addListener(marker, 'click', function(){
-      infowindow.open(map, marker)  
-      
+       
+      // infowindow.open(map, marker)
+      window.open('https://map.kakao.com/');
     })
 
 

@@ -69,11 +69,13 @@ function App() {
         <tr>
           <td className='facilities'><Facilities setName={setName}isTour={isTour} setIsTour={setIsTour} isShowTourData={isShowTourData} setIsShowTourData={setIsShowTourData} setTourData={setTourData} setLiveData={setLiveData} isShowLiveData={isShowLiveData} setIsShowLiveData={setIsShowLiveData} isLive={isLive} setIsLive={setIsLive} isChair={isChair} setIsChair={setIsChair} isLibrary={isLibrary} setIsLibrary={setIsLibrary}setChairData={setChairData} setIsShowChairData={setIsShowChairData} setIsShowLibraryData={setIsShowLibraryData} setLat={setLat} setLng={setLng} locate={locate} setLocate={setLocate}></Facilities>
           </td>     
-          <td></td><td><MapSet lat={lat} lng={lng}></MapSet></td>
+          <td></td>
+          <td><MapSet lat={lat} lng={lng}></MapSet></td><td></td>
+          <td className='data'><Data tourData={tourData} isShowTourData={isShowTourData} liveData={liveData} isShowLiveData={isShowLiveData} chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>
         </tr>
         <tr>
           <td></td>
-        <td></td><td className='data'><Data tourData={tourData} isShowTourData={isShowTourData} liveData={liveData} isShowLiveData={isShowLiveData} chairData={chairData} isShowChairData={isShowChairData} isShowLibraryData={isShowLibraryData} locate={locate}></Data></td>     
+        <td></td>     
         </tr> 
       </tbody>
     

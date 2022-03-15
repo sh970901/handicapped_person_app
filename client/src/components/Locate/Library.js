@@ -20,8 +20,6 @@ const Library = (props) => {
         props.setIsShowLibraryData(true)
         props.setLat(props.locate[0].위도)
         props.setLng(props.locate[0].경도)
-        
-
     }
 
     return (
