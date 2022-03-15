@@ -57,8 +57,9 @@ function App() {
     <table>
       <thead>
         <tr>
-          <td> <h3 className='title'>ㅤ<img onClick={openModal} src={title_logo} style={{width:"30px", height:"30px", marginRight:"10px",marginTop : "-10px" }}/>장애인 시설 찾기</h3></td>
+          <td> <div><h3 className='title'>ㅤ<img onClick={openModal} src={title_logo} style={{width:"30px", height:"30px", marginRight:"10px",marginTop : "-10px" }}/>장애인 시설 찾기</h3><p className='how'>돋보기를 누르면 사용법이 나와요!</p></div></td>
           {showModal ? <TodoModal openModal={openModal} closeModal={closeModal}></TodoModal> : null}
+          
         </tr>
       </thead>
       <tbody>

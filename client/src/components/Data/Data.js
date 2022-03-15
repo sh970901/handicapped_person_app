@@ -1,14 +1,7 @@
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-//도서관 정보 표현
+
+//데이터 정보 표현
 const Data = (props) => {
-  const [state, setState] = useState('')
-
-  useEffect(() => {
-  
-  }, [props])
-
   return (
 
     <div>

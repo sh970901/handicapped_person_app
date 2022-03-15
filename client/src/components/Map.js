@@ -1,10 +1,6 @@
 /*global kakao*/
 import React, { useEffect, useState } from 'react'
 
-import Geocode from "react-geocode";
-
-
-
 //카카오맵 속성 
 
 const Map = (props) => {
@@ -33,17 +29,12 @@ const Map = (props) => {
     
     
     kakao.maps.event.addListener(marker, 'click', function(){
-       
+      //마커클릭시 이벤트
       // infowindow.open(map, marker)
       window.open('https://map.kakao.com/');
     })
 
-
-
   }, [props])
-
-
-
 
   return (
     <div>

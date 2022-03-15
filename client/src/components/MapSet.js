@@ -28,9 +28,6 @@ const MapSet = (props) => {
         setLevel(level+1)
     }
     
-
-    
-
     return (
         <div className='mapSet'>
             <Map
@@ -41,11 +38,6 @@ const MapSet = (props) => {
             <button className='btn' onClick={myLocate}>내 위치</button> <br/><br/>
             <button className='btn' onClick={showLarge}>확대</button>
             <button className='btn' onClick={showSmall}>취소</button><br/><br/>
-            {/* <button onClick={geocode}>위도경도확인</button> */}
-
-            
-
-
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react';
 import { useState } from 'react'
 import ElectricChair from './Locate/ElectricChair';
 import Library from './Locate/Library';
@@ -9,10 +8,6 @@ import Tourism from './Locate/Tourism'
 
 const Facilities = (props) => {
   const [status, setStatus] = useState(true)
-  const [data1, setData1] = useState([]);
-  // const [isLibrary, setIsLibrary] = useState(false)
-  // const [isChair, setIsChair] = useState(false)
-
 
   function showLibrary() {
     setStatus(false)
@@ -37,7 +32,7 @@ const Facilities = (props) => {
   function showElectChair() {
     setStatus(false)
     props.setName('전동 휠 체어')
-    // window.location.reload()
+  
     props.setIsLibrary(false)
     props.setIsShowLibraryData(false)
 

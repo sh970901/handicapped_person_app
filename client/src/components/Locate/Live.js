@@ -19,8 +19,6 @@ const Live = (props) => {
     function geocode(data){
         new kakao.maps.services.Geocoder().addressSearch(`${data}`, function(results,status){
             if(status === kakao.maps.services.Status.OK){
-                console.log(results[0].x, results[0].y)
-                // var coords = new kakao.mpas.LatLng(results[0].y, results[0].x);
                 props.setLat(results[0].y)
                 props.setLng(results[0].x)
             }
