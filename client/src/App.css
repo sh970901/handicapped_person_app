@@ -18,7 +18,9 @@
 }
 
 
-
+.title{
+  text-align: center;
+}
 
 
 
@@ -32,7 +34,7 @@
 .facilitiesShow{
   display: inline-block;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 10px; 
   background: rgb(236, 199, 97); 
   width: 400px;
@@ -87,4 +89,31 @@ margin-left: 15%;
 .name{
   margin-left: 50%;
 }
+.modalItem
+   {
+     margin-top: 30px;
+     margin-left: 30px;
+   }
+   .ReactModal__Content
+   {
+    background-color: #a99e6f;
+    font-family: 'Nanum Pen Script', cursive;
+    width: 700px;
+    height: 500px;
+
+   }
+   .ReactModal__Content button
+   {
+    background-color: #a99e6f;
+    outline: 0.1;
+    color: #3b2616;
+    font-family: 'Jua', sans-serif;
+    border: 0;
+     outline: 0;
+     margin-left: 250px;
+     width: 100px;
+     border: 1px solid #d1a788;
+     border-radius: .25em;
+   }
+
 
