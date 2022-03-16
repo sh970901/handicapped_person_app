@@ -85,3 +85,5 @@ function App() {
   );
 }
 export default App;
+
+//css수정, DB 위도 경도 없는 데이터 수정, 반응형 웹, 부가기능, 서버 배포, 분석보고서 
