@@ -3,6 +3,6 @@
 </br><p>사용 기술</br></br>
 • React를 활용한 클라이언트 개발 </br></br>
 • Node.js express 서버 측 구현 </br></br>
-• Mysql을 통한 시설 유형 및 종류, 정보들의 DB 구축 </br></br>
+• Mysql을 통한 시설 유형과 종류 및 정보를 담는 DB 구축 </br></br>
 • KakaoMap 사용 </br></br>
 </p>
