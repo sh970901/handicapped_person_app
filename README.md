@@ -3,8 +3,6 @@
 </br><p>사용 기술</br></br>
 • React를 활용한 클라이언트 개발 </br></br>
 • Node.js express 서버 측 구현 </br></br>
-• Mysql 핫한 브랜드 정보 및 조회 수 </br></br>
-• GoogleMap 사용 </br></br>
-• 브랜드 사진 Crawling</br></br>
-• Teachable Machine를 활용한 머신러닝</br></br>
+• Mysql을 통한 시설 유형 및 종류, 정보들의 DB 구축 </br></br>
+• KakaoMap 사용 </br></br>
 </p>
