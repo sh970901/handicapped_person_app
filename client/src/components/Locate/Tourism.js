@@ -35,7 +35,7 @@ const Tourism = (props) => {
                 geocode(data[i].idtourism_addr)
 
             }
-            }>{data[i].idtourism_name}</button><br/></>)
+            }>{data[i].idtourism_name}</button><br/><br/></>)
         }   
     }
     return result

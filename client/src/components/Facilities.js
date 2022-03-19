@@ -105,7 +105,10 @@ const Facilities = (props) => {
         <button className='facilitiesBtn' onClick={showTour}>장애인 투어리즘</button>{'  '}
       </div><br/>
       <div className='facilitiesShow'>
-        {status ? <div>버튼을 클릭해주세요</div> : null}
+        {status ? 
+        <div>
+          <h3>위에 버튼중에서</h3>
+          <h3>찾고자 하는 시설을 눌러주세요</h3></div> : null}
         {props.isLibrary ? <Library setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowLibraryData={props.setIsShowLibraryData} ></Library> : null}
         {props.isChair ? <ElectricChair setChairData={props.setChairData} setIsShowChairData={props.setIsShowChairData} setLat={props.setLat} setLng={props.setLng} locate={props.locate} setIsShowData={props.setIsShowData}></ElectricChair> : null}
         {props.isLive ? <Live setIsShowLiveData={props.setIsShowLiveData} isShowLiveData={props.isShowLiveData} locate={props.locate} setLiveData={props.setLiveData} setLat={props.setLat} setLng={props.setLng}></Live> : null}

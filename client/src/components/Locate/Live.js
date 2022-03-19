@@ -38,7 +38,7 @@ const Live = (props) => {
                     geocode(data[i].시설주소)
 
                 }
-                }>{data[i].시설명}</button><br/></>)
+                }>{data[i].시설명}</button><br/><br/></>)
             }   
         }
         return result

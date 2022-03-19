@@ -7,7 +7,7 @@ import Facilities from './components/Facilities';
 import Name from './components/Head/Name';
 import MapSet from './components/MapSet';
 import TodoModal from './components/TodoModal';
-import title_logo from './image/title_logo.png'
+import title_logo from './image/question.png'
 
 function App() {
   const [lat, setLat] = useState(37.365264512305174);
@@ -57,7 +57,7 @@ function App() {
     <table>
       <thead>
         <tr>
-          <td> <div><h3 className='title'>ㅤ<img onClick={openModal} src={title_logo} style={{width:"30px", height:"30px", marginRight:"10px",marginTop : "-10px" }}/>장애인 시설 찾기</h3><p className='how'>돋보기를 누르면 사용법이 나와요!</p></div></td>
+          <td> <div><h3 className='title'>ㅤ<img onClick={openModal} src={title_logo} style={{width:"30px", height:"30px", marginRight:"10px",marginTop : "-10px" }}/>장애인 시설 찾기</h3><h4 className='how'>돋보기를 누르면 사용법이 나와요!</h4></div></td>
           {showModal ? <TodoModal openModal={openModal} closeModal={closeModal}></TodoModal> : null}
           
         </tr>
